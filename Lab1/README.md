@@ -2,13 +2,16 @@
 
 **Contents**
 **Part 1: Introduction to PyTorch** 
-**Part2 : Training a Character-Level RNN on Music**
+**Part2 : Music Generation using RNN**
 
-This part of the project dives into building a music-generating neural network from scratch using PyTorch. By the end, the model learns to generate sequences of musical tokens — kind of like how text generators predict the next character — except here it's predicting the next note or event in a MIDI sequence.
+![Let's Dance!](http://33.media.tumblr.com/3d223954ad0a77f4e98a7b87136aa395/tumblr_nlct5lFVbF1qhu7oio1_500.gif)
 
-This was part of an educational lab where I got hands-on with core deep learning concepts while actually training a generative model. It was messy, eye-opening, and very satisfying.
+This project implements a character-level music generation model using Recurrent Neural Networks (RNNs), specifically LSTM (Long Short-Term Memory) units, trained on symbolic music data. It is inspired by models used in text generation, adapted to musical sequences ( ABC notation).
 
 ### Model architecture
+
+<img src="https://raw.githubusercontent.com/MITDeepLearning/introtodeeplearning/2019/lab1/img/lstm_unrolled-01-01.png" alt="Drawing"/>
+
 
 Input:         (B, L)             # Batch of sequences (token indices)
 Embedding:     (B, L, D)          # Each token becomes a D-dim vector
