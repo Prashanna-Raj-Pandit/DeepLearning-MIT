@@ -1,8 +1,10 @@
 # Lab 1 
 
 **Contents**
-**Part 1: Introduction to PyTorch** 
-**Part2 : Music Generation using RNN**
+
+[**Part 1: Introduction to PyTorch**](https://github.com/Prashanna-Raj-Pandit/DeepLearning-MIT/blob/main/Lab1/PT_Part1_Intro.ipynb) 
+
+[**Part2 : Music Generation using RNN**](https://github.com/Prashanna-Raj-Pandit/DeepLearning-MIT/blob/main/Lab1/PT_Part2_Music_Generation.ipynb)
 
 ![Let's Dance!](http://33.media.tumblr.com/3d223954ad0a77f4e98a7b87136aa395/tumblr_nlct5lFVbF1qhu7oio1_500.gif)
 
@@ -14,8 +16,11 @@ This project implements a character-level music generation model using Recurrent
 
 
 Input:         (B, L)             # Batch of sequences (token indices)
+
 Embedding:     (B, L, D)          # Each token becomes a D-dim vector
+
 LSTM:          (B, L, H)          # Hidden representations from context
+
 FC Layer:      (B, L, V)          # Project to vocabulary logits
 
 **Here are the big takeways**
