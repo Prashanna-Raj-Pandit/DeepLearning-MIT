@@ -8,12 +8,26 @@
 
 ![Let's Dance!](http://33.media.tumblr.com/3d223954ad0a77f4e98a7b87136aa395/tumblr_nlct5lFVbF1qhu7oio1_500.gif)
 
+### 🔊 Listen to the Output
+[Click to listen](./output_10.wav)
+<audio controls>
+  <source src="./output_10.wav" type="audio/wav">
+</audio>
+
+
 This project implements a character-level music generation model using Recurrent Neural Networks (RNNs), specifically LSTM (Long Short-Term Memory) units, trained on symbolic music data. It is inspired by models used in text generation, adapted to musical sequences ( ABC notation).
 
-### Model architecture
+### The RNN Model
+
+The model is based off the LSTM architecture, where we use a state vector to maintain information about the temporal relationships between consecutive characters. The final output of the LSTM is then fed into a fully connected linear nn.Linear layer where we'll output a softmax over each character in the vocabulary, and then sample from this distribution to predict the next character.
+
+we use PyTorch's nn.Module to define the model. Three components are used to define the model:
+
+* nn.Embedding: This is the input layer, consisting of a trainable lookup table that maps the numbers of each character to a vector with embedding_dim dimensions.
+* nn.LSTM: Our LSTM network, with size hidden_size.
+* nn.Linear: The output layer, with vocab_size outputs.
 
 <img src="https://raw.githubusercontent.com/MITDeepLearning/introtodeeplearning/2019/lab1/img/lstm_unrolled-01-01.png" alt="Drawing"/>
-
 
 Input:         (B, L)             # Batch of sequences (token indices)
 
@@ -23,17 +37,17 @@ LSTM:          (B, L, H)          # Hidden representations from context
 
 FC Layer:      (B, L, V)          # Project to vocabulary logits
 
-**Here are the big takeways**
+### Prediction Procedure:
 
-* How to structure an LSTM model for sequential prediction tasks.
+* Initialize a "seed" start string and the RNN state, and set the number of characters we want to generate.
 
-* What embedding layers do and why we need them when working with index-based inputs.
+* Use the start string and the RNN state to obtain the probability distribution over the next predicted character.
 
-* How LSTM's hidden and cell states work and how to initialize and carry them through time steps.
+* Sample from multinomial distribution to calculate the index of the predicted character. This predicted character is then used as the next input to the model.
 
-* How to batch variable-length sequences, shift them to form input-output pairs, and reshape tensors for loss calculation.
+* At each time step, the updated RNN state is fed back into the model, so that it now has more context in making the next prediction. After predicting the next character, the updated RNN states are again fed back into the model, which is how it learns sequence dependencies in the data, as it gets more information from the previous predictions.
 
-* How to compute cross-entropy loss when your output is a sequence of predictions over a vocabulary.
+![prediction_procedure](./prediction_procedure.png)
 
-* What it means to zero out gradients, backpropagate, and step the optimizer during training.
-
+### Training Loss
+![image.png](./image.png)
