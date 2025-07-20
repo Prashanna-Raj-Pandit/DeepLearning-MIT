@@ -9,7 +9,7 @@
 ![Let's Dance!](http://33.media.tumblr.com/3d223954ad0a77f4e98a7b87136aa395/tumblr_nlct5lFVbF1qhu7oio1_500.gif)
 
 ### 🔊 Listen to the Output
-[Click to listen](./output_10.wav)
+[Click to listen](./output_10.mp3)
 <audio controls>
   <source src="./output_10.wav" type="audio/wav">
 </audio>
