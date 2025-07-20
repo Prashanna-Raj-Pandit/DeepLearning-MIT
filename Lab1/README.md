@@ -27,7 +27,7 @@ we use PyTorch's nn.Module to define the model. Three components are used to def
 * nn.LSTM: Our LSTM network, with size hidden_size.
 * nn.Linear: The output layer, with vocab_size outputs.
 
-<img src="https://raw.githubusercontent.com/MITDeepLearning/introtodeeplearning/2019/lab1/img/lstm_unrolled-01-01.png" alt="Drawing"/>
+![architecture](./architecture.png)
 
 Input:         (B, L)             # Batch of sequences (token indices)
 
