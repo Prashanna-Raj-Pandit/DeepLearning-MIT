@@ -8,9 +8,9 @@ ___
 
 # CNN for handwritten digit classification
 
-![nn](./nn.png)
+![nn](./images/nn.png)
 ### CNN Architecture
-![conv_net](./conv_net.png)
+![conv_net](./images/conv_net.png)
 
 1. **Input Layer**
 
@@ -68,3 +68,10 @@ ___
 
     Maps 128 hidden features to 10 output logits.
 
+### Training Loss
+![alt text](./images/training_loss.png)
+
+### Results
+
+The vertical bar shows the confidence level. The blue bar shows the model is highly confident in predicting the numbers.
+![alt text](./images/results.png)
