@@ -75,3 +75,10 @@ ___
 
 The vertical bar shows the confidence level. The blue bar shows the model is highly confident in predicting the numbers.
 ![alt text](./images/results.png)
+
+---
+## The DB-VAE model
+
+The key idea behind this debiasing approach is to use the latent variables learned via a VAE to adaptively re-sample the CelebA data during training. Specifically, we will alter the probability that a given image is used during training based on how often its latent features appear in the dataset. So, faces with rarer features (like dark skin, sunglasses, or hats) should become more likely to be sampled during training, while the sampling probability for faces with features that are over-represented in the training dataset should decrease (relative to uniform random sampling across the training data).
+
+![DB-VAE model](./images/db-vae.png)
