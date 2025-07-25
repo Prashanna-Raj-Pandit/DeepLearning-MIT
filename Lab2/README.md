@@ -8,7 +8,7 @@ ___
 
 # CNN for handwritten digit classification
 
-![nn](./images/nn.png)
+<img src="./images/nn.png" height="50%"></img>
 ### CNN Architecture
 ![conv_net](./images/conv_net.png)
 
@@ -69,12 +69,13 @@ ___
     Maps 128 hidden features to 10 output logits.
 
 ### Training Loss
-![alt text](./images/training_loss.png)
+<img src="./images/training_loss.png" height="50%"></img>
 
 ### Results
 
 The vertical bar shows the confidence level. The blue bar shows the model is highly confident in predicting the numbers.
-![alt text](./images/results.png)
+
+<img src="./images/results.png"></img>
 
 ---
 ## The DB-VAE model
