@@ -8,7 +8,7 @@ ___
 
 # CNN for handwritten digit classification
 
-<img src="./images/nn.png" height="50%"></img>
+<img src="./images/nn.png" height="300px" width="700px"></img>
 ### CNN Architecture
 ![conv_net](./images/conv_net.png)
 
@@ -69,7 +69,7 @@ ___
     Maps 128 hidden features to 10 output logits.
 
 ### Training Loss
-<img src="./images/training_loss.png" height="50%"></img>
+<img src="./images/training_loss.png" height="400px" width="600px"></img>
 
 ### Results
 
