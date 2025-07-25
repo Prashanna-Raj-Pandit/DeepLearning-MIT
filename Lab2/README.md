@@ -84,4 +84,6 @@ The key idea behind this debiasing approach is to use the latent variables learn
 
 ![DB-VAE model](./images/db-vae.png)
 
-![output](./images/db_vae.png)
+**Generated Output**
+
+<img src="./images/db_vae.png" width="400px"></img>
