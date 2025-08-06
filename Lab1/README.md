@@ -14,7 +14,6 @@
   <source src="./output_10.wav" type="audio/wav">
 </audio>
 
-
 This project implements a character-level music generation model using Recurrent Neural Networks (RNNs), specifically LSTM (Long Short-Term Memory) units, trained on symbolic music data. It is inspired by models used in text generation, adapted to musical sequences ( ABC notation).
 
 ### The RNN Model
