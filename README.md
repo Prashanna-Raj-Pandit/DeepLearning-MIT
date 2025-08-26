@@ -10,5 +10,7 @@
 
 [**Debiasing Facial Detection Systems (Part 2)**](https://github.com/Prashanna-Raj-Pandit/DeepLearning-MIT/blob/main/Lab2/PT_Part2_Debiasing.ipynb)
 
+![DB-VAE model](./Lab2/images/db-vae.png)
+
 <img src="https://i.ibb.co/BjLSRMM/ezgif-2-253dfd3f9097.gif" />
 
